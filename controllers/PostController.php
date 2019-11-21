@@ -45,6 +45,8 @@ class PostController {
         move_uploaded_file($linkTemp, $caminhoSalvar);
 
         $resultado = $post->criarPost($caminhoSalvar, $descricao);
+
+        var_dump($resultado);
         if($resultado){
             header('Location:/fake-instagram-POO/posts');
         }else {
@@ -52,21 +54,20 @@ class PostController {
         }
     }
 
-    public function cadastroUser()
-    {
-      
-      $cadastro = new Cadastrar;
-      $nome = $_POST['full-name'];
-      $senha = $_POST['password'];
-      $username = $_POST['username'];
-      $nasc = $_POST['birth'];
+    private function cadastroUser(){
+        $cadastro = new Cadastrar();
+        $nome = $_POST['fullName'];
+        // $nasc = $_POST['birth'];
+        $username = $_POST['username'];
+        $senha = $_POST['password'];
 
-      $resultado = $cadastro->cadastrarUsuario($nome,$senha,$username,$nasc);
-      if ($resultado){
-        header('Location:/fake-instagram-POO/posts');
-      }else{
-        echo "Nao foi possível se cadastrar.";
-      }
+        $batata = $cadastro->cadastrarUsuario($nome, $username, $senha);
+        var_dump($batata);
+        // if($batata){
+        //   header('Location:/fake-instagram-POO/posts');
+        // }else{
+        //   echo "Nao foi possível se cadastrar.";
+        // }
     }
 
     private function listarPosts(){

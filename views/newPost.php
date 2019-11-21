@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="views/css/styles.css">
+    <link rel="stylesheet" href="views/css/styles2.css">
 </head>
 <body>
-    
+
     <?php include "views/includes/header.php"; ?>
     <main class="board">
         <h1> Cadastro de novo Post </h1>

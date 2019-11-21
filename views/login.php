@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="C:\xamppy\htdocs\fake-instagram-POO\views\css\styles.css">
+    <link rel="stylesheet" href="views/css/styles2.css">
 </head>
 <body>
 
     <?php include 'C:\xamppy\htdocs\fake-instagram-POO\views\includes\header.php'; ?>
 
-    <main class="board d-flex flex-column justify-content-center align-items-center col-12">
+    <main class="board-two">
         <h1>Login</h1>
         <form class="d-flex flex-column justify-content-center col-6" action="index.php" method="post">
           <label for="full-name">Username</label>
