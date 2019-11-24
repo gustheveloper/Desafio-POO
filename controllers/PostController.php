@@ -1,6 +1,5 @@
 <?php
 include_once "models/Post.php";
-include_once "models/Register.php";
 
 class PostController {
 
@@ -15,16 +14,6 @@ class PostController {
             case "cadastrar-post":
                 $this->cadastroPost();
             break;
-            case "cadastrar-usuario":
-                $this->viewCadastro();
-            break;
-            case "cadastrar-user":
-                $this->cadastroUser();
-            break;
-            case "login":
-                $this->viewLogin();
-            break;
-
         }
     }
 
@@ -46,7 +35,6 @@ class PostController {
 
         $resultado = $post->criarPost($caminhoSalvar, $descricao);
 
-        var_dump($resultado);
         if($resultado){
             header('Location:/fake-instagram-POO/posts');
         }else {
@@ -54,34 +42,10 @@ class PostController {
         }
     }
 
-    private function cadastroUser(){
-        $cadastro = new Cadastrar();
-        $nome = $_POST['fullName'];
-        // $nasc = $_POST['birth'];
-        $username = $_POST['username'];
-        $senha = $_POST['password'];
-
-        $batata = $cadastro->cadastrarUsuario($nome, $username, $senha);
-        var_dump($batata);
-        // if($batata){
-        //   header('Location:/fake-instagram-POO/posts');
-        // }else{
-        //   echo "Nao foi possível se cadastrar.";
-        // }
-    }
-
     private function listarPosts(){
         $post = new Post();
         $listaPosts = $post->listarPosts();
         $_REQUEST['posts'] = $listaPosts;
         $this->viewPosts();
-    }
-
-    private function viewCadastro(){
-        include "views/registers.php";
-    }
-
-    private function viewLogin(){
-        include "views/login.php";
     }
 }

@@ -23,14 +23,26 @@
         break;
 
         case "cadastrar-usuario":
-            include "controllers/PostController.php";
-            $controller = new PostController();
+            include "controllers/RegisterController.php";
+            $controller = new RegisterController();
+            $controller->acao($rotas);
+        break;
+
+        case "cadastrar-user":
+            include "controllers/RegisterController.php";
+            $controller = new RegisterController();
             $controller->acao($rotas);
         break;
 
         case "login":
-            include "controllers/PostController.php";
-            $controller = new PostController();
+            include_once "controllers/LoginController.php";
+            $controller = new LoginController();
+            $controller->acao($rotas);
+          break;
+
+        case "logar":
+            include_once "controllers/LoginController.php";
+            $controller = new LoginController();
             $controller->acao($rotas);
         break;
 

@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="views/css/styles2.css">
+    <link rel="stylesheet" href="views/css/style.css">
 </head>
 <body>
 
@@ -24,7 +24,7 @@
                 <p class="card-text">
                     <?php echo $post->descricao; ?>
                 </p>
-                <button class="button">Like</button>
+                <button class="button">♡</button>
             </div>
         </div>
     <?php endforeach; ?>

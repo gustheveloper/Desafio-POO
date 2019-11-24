@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="views/css/styles2.css">
+    <link rel="stylesheet" href="views/css/style.css">
 </head>
 <body>
 
@@ -14,11 +14,11 @@
 
     <main class="board-two">
         <h1>Login</h1>
-        <form class="d-flex flex-column justify-content-center col-6" action="index.php" method="post">
+        <form class="d-flex flex-column justify-content-center col-6" action="logar" method="post">
           <label for="full-name">Username</label>
-          <input type="text" name="full-name" placeholder=>
+          <input type="text" name="username" placeholder="Coloque seu @">
           <label for="password">Senha</label>
-          <input type="password" name="password" value="">
+          <input type="password" name="password" placeholder="Coloque sua senha">
           <button type="submit" class="btn btn-success">Entrar</button>
 
         </form>

@@ -18,10 +18,18 @@ header {
 
 .board{
     background: #fff;
-    height: 90vh;
+    height: 80vh;
     width: 50%;
     margin: 0 auto;
     padding: 20px;
+}
+
+.board-two{
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .float-button{
@@ -57,14 +65,19 @@ header {
 }
 
 div .button{
-background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
+background-color: white;
+  color: black;
+  padding: 3px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 25px;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 40px;
+}
+
+div .button:focus {
+  background-color: red;
+  color: white;
 }

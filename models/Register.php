@@ -1,6 +1,6 @@
 <?php
 
-  include_once "Conexao.php";
+  include_once "models/Conexao.php";
 
   class Cadastrar extends Conexao{
 
