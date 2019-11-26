@@ -9,6 +9,9 @@ class LoginController{
         break;
         case "logar":
           $this->logarUsuario();
+        break;
+        case "sair":
+        $this->logout();
       }
     }
 
@@ -21,13 +24,19 @@ class LoginController{
         $username = $_POST['username'];
         $senha = $_POST['password'];
 
-        $tentativa = $login->logarUser($username);
-        $count = $tentativa->rowCount();
-        if ($q > 0){
-          echo "Corretíssimo, lesque";
-        }else{
-          echo "Nadaver";
-        }
+        $tentativa = $login->logarUser($username, $senha);
+        // if ($tentativa->rowCount() == 1){
+        //   echo "Corretíssimo, lesque";
+        // }else{
+        //   echo "Nadaver";
+        // }
+      }
+
+      private function logout()
+      {
+        session_start();
+        session_destroy();
+        header('Location:/fake-instagram-POO/login');
       }
 
 }

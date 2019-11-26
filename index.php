@@ -46,5 +46,11 @@
             $controller->acao($rotas);
         break;
 
+        case "sair":
+            include_once "controllers/LoginController.php";
+            $controller = new LoginController();
+            $controller->acao($rotas);
+        break;
+
 
     }

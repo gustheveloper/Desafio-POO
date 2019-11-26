@@ -27,13 +27,14 @@ class PostController {
 
     private function cadastroPost(){
         $post = new Post();
+        $user = $_SESSION['username'];
         $descricao = $_POST['descricao'];
         $nomeArquivo = $_FILES['img']['name'];
         $linkTemp = $_FILES['img']['tmp_name'];
         $caminhoSalvar = "views/img/$nomeArquivo";
         move_uploaded_file($linkTemp, $caminhoSalvar);
 
-        $resultado = $post->criarPost($caminhoSalvar, $descricao);
+        $resultado = $post->criarPost($caminhoSalvar, $descricao, $user);
 
         if($resultado){
             header('Location:/fake-instagram-POO/posts');

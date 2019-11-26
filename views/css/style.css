@@ -81,3 +81,8 @@ div .button:focus {
   background-color: red;
   color: white;
 }
+
+.menu{
+  display: flex;
+  width: 100%;
+}

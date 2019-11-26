@@ -65,13 +65,25 @@ header {
 
 div .button{
 background-color: white;
-  border: solid;
   color: black;
-  padding: 10px 15px;
+  padding: 3px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 5px;
+  font-size: 25px;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 40px;
+}
+
+div .button:focus {
+  background-color: red;
+  color: white;
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10%;
 }
