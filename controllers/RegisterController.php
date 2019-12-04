@@ -22,12 +22,11 @@ class RegisterController
     public function cadastroUser(){
     $cadastro = new Cadastrar();
     $nome = $_POST['fullName'];
-    $nasc = $_POST['birth'];
     $username = $_POST['username'];
     $senha = $_POST['password'];
 
-    $batata = $cadastro->cadastrarUsuario($nome, $username, $senha);
-    if($batata){
+    $certo = $cadastro->cadastrarUsuario($nome, $username, $senha);
+    if($certo){
       header('Location:/fake-instagram-POO/posts');
     }else{
       echo "Nao foi possível se cadastrar.";

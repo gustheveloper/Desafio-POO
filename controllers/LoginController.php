@@ -25,6 +25,7 @@ class LoginController{
         $senha = $_POST['password'];
 
         $tentativa = $login->logarUser($username, $senha);
+        $tentativa = $_SESSION['id'] = $tentativa ['id']
         // if ($tentativa->rowCount() == 1){
         //   echo "Corretíssimo, lesque";
         // }else{
