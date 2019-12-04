@@ -20,7 +20,7 @@ class LoginController{
       }
       private function logarUsuario()
       {
-        $login = new Login;
+        $login = new Login();
         $username = $_POST['username'];
         $senha = $_POST['password'];
 

@@ -21,7 +21,7 @@ class Login extends Conexao
       header('Location:/fake-instagram-POO/login');
     }
     $resultado = $query->fetch(PDO::FETCH_ASSOC);
-
+    return $resultado;
 
   }
   // function LogarSenha($senha)

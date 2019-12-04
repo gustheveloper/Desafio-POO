@@ -2,7 +2,7 @@
 
  class Conexao{
 
-    private $host = 'mysql:host=localhost;dbname=fakeig;port=3306';
+    private $host = 'mysql:host=localhost;dbname=fakeig;port=3307';
     private $user = 'root';
     private $pass = '';
 
